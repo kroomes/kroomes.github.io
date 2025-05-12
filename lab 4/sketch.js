@@ -1,18 +1,21 @@
+let video;
 let img;
 
 function setup() {
-  // Create the canvas
-  createCanvas(800, 600);
+  noCanvas();
 
-  // Load an image using createImg()
-  img = createImg('thunderbolts poster.jpg');  // Adjust the path as necessary
-  img.size(200, 200);  // Resize the image
-  img.position(100, 100);  // Position the image on the screen
-}
+  // Load and show video
+  video = createVideo(['thunderbolts-trailer.mp4']);
+  video.size(480, 270);
+  video.attribute('controls', '');   // Show play/pause
+  video.parent(document.body);       // Attach to body
+  video.volume(0);                   // Mute to allow autoplay
+  video.autoplay(true);              // Try autoplay
+  video.loop();                      // Optional loop
 
-function draw() {
-  background(220);
-  
-  // You can also use image manipulation here, but createImg() is for adding to the page directly.
+  // Load and show image
+  img = createImg('thunderbolts poster.jpg', 'Uploaded Image');
+  img.size(300, 300);
+  img.parent(document.body);
 }
 
