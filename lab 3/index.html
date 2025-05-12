@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>p5.js GUI Fun</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.dom.min.js"></script>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    #controls {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Ball Controller 🎾</h1>
+  <div id="controls">
+    <p>Ball Size:</p>
+    <input type="range" id="sizeSlider" min="10" max="200" value="50">
+    <p>Ball Color:</p>
+    <select id="colorMenu">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="purple">Purple</option>
+    </select>
+  </div>
+
+  <script>
+    // ---------------- SETUP STUFF ----------------
+    let x, y;
+    let sizeSlider, colorMenu;
+    let ballColor = 'red';
+    let bgColor = 220;
+
+    function setup() {
+      createCanvas(600, 400);
+      x = width/2;
+      y = height/2;
+
+      // Connect slider and menu using p5.dom
+      sizeSlider = select('#sizeSlider'); // using p5.dom select()
+      colorMenu = select('#colorMenu');   // using p5.dom select()
+
+      // Setting initial values
+      sizeSlider.value(50); // <- USING .value() to SET!
+    }
+
+    function draw() {
+      background(bgColor);
+      fill(ballColor);
+      noStroke();
+      ellipse(x, y, sizeSlider.value()); // <- USING .value() to GET!
+    }
+
+    // ---------------- CALLBACK FUNCTIONS ----------------
+
+    function mousePressed() {
+      // move ball to a random spot when mouse clicked
+      x = random(width);
+      y = random(height);
+    }
+
+    function keyPressed() {
+      // change background to random grayscale color when any key is pressed
+      bgColor = random(255);
+    }
+
+    function mouseReleased() {
+      // When mouse released, update ball color based on menu
+      ballColor = colorMenu.value(); // <- USING .value() to GET!
+    }
+  </script>
+
+</body>
+</html>
