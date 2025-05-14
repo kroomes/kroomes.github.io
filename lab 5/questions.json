@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "question": "What's your reaction in a tough situation?",
+      "options": [
+        { "text": "Stay calm and analyze the problem", "character": "Link" },
+        { "text": "Step up and protect those around you", "character": "Ellie Williams" },
+        { "text": "Crack a joke to lighten the mood, then take action", "character": "Spider-Man" }
+      ]
+    },
+    {
+      "question": "How do you spend your free time?",
+      "options": [
+        { "text": "Exploring new places and taking in nature", "character": "Link" },
+        { "text": "Playing guitar, drawing, or writing", "character": "Ellie Williams" },
+        { "text": "Hanging out with friends or helping others", "character": "Spider-Man" }
+      ]
+    },
+    {
+      "question": "What drives you the most?",
+      "options": [
+        { "text": "Courage and destiny", "character": "Link" },
+        { "text": "Love and loyalty", "character": "Ellie Williams" },
+        { "text": "Responsibility and doing what’s right", "character": "Spider-Man" }
+      ]
+    }
+  ]
+}

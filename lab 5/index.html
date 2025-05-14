@@ -2,26 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Interactive Color Circles</title>
+  <title>Which Character Are You?</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
-      background-color: #f0f0f0;
+      padding: 0;
+      background: linear-gradient(135deg, #5f2c82, #49a09d);
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2em;
+      color: #fffbe0;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    canvas {
+      display: block;
+      margin-top: 20px;
+      border: 2px solid white;
+      box-shadow: 0 0 10px #000000aa;
+    }
+
+    p#question {
+      font-size: 22px;
+      margin: 20px auto;
+      max-width: 90%;
+    }
+
+    button {
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background: #ffffffcc;
+      color: #333;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffdb58;
+      color: #111;
     }
   </style>
 </head>
 <body>
-  <h2>Click to Place Circles</h2>
-  <p>Circles will stay even if you refresh!</p>
-
-  <!-- Include P5.js -->
-  <script src="p5.min.js"></script>
-  <!-- Link to your custom sketch -->
-  <script src="sketch.js"></script>
+  <h1>Which Character Are You?</h1>
 </body>
 </html>

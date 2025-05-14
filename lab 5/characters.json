@@ -1,0 +1,23 @@
+{
+  "characters": [
+    {
+      "name": "Ellie Williams",
+      "game": "The Last of Us",
+      "description": "You're brave, loyal, and driven by a deep sense of justice. You’ve endured hardship and still stand strong.",
+      "image": "ellie-williams.jpg"
+    },
+    {
+      "name": "Spider-Man",
+      "game": "Marvel's Spider-Man",
+      "description": "You’re smart, witty, and always willing to help others even when it’s tough. Responsibility is your middle name.",
+      "image": "spiderman.jpg"
+    },
+    {
+      "name": "Link",
+      "game": "The Legend of Zelda",
+      "description": "You are courageous, quiet but powerful, and ready to explore the world to protect those you love.",
+      "image": "link.jpg"
+    }
+  ]
+}
+
