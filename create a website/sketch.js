@@ -7,3 +7,4 @@ function setup() {
     ellipse(width/2, height/2, 100, 100);
   }
   
+  console.log("Hello from script.js!");
